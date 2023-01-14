@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,19 @@
     <title>css practice</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div class="container loader">
-        <script src="script.js"></script>
+        <script>
+            var inputData, dataLength, num;
+            inputData = prompt("이거하는데 2시간이?");
+            var inputArr = Array.from(inputData);
+            dataLength = inputArr.length;
+            for (num = 0; num < dataLength; num++) {
+                document.write("<span style=\"animation-delay:" + num*0.1 +"s;\">" + inputArr[num]+ "</span>");
+            }
+        </script>
     </div>
 </body>
 </html>
